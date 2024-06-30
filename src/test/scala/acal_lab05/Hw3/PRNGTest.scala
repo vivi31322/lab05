@@ -11,7 +11,7 @@ class PRNGTest(dut:PRNG) extends PeekPokeTester(dut) {
     implicit def bigint2boolean(b:BigInt):Boolean = if (b>0) true else false
 
     var error = 0
-
+//100->10 println
     for(i <- 1 to 100){
         println(s"The ${i} testing :")
         step(Random.nextInt(10))
@@ -45,6 +45,7 @@ class PRNGTest(dut:PRNG) extends PeekPokeTester(dut) {
             println("Oh no!! There must be something wrong in your PRNG...Correct these situations...")
             println("1. Repeated numbers")
             println("2. numbers that not in 0~9")
+            println(error+" many!")
     }
 }
 
